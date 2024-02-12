@@ -4,6 +4,7 @@ import {Weather} from "./components/weather.jsx";
 import {weatherApi_URL, options} from "./api/weatherApi.js";
 import {forecast_url, forecastOptions} from "./api/forecastApi.js";
 import {useState} from "react";
+import {Forecast} from "./components/forecast.jsx";
 
 export function App() {
     const [weather, setWeather] = useState(null);
@@ -22,7 +23,6 @@ export function App() {
             const response = await fetch(`${forecast_url}/${lat}/${lot}`, forecastOptions);
             const result = await response.json();
             setForecast(result)
-            console.log(result);
         } catch (error) {
             console.error(error);
         }
@@ -32,6 +32,7 @@ export function App() {
         <div>
             <Search onSearchChange={handleOnSearchData}/>
             {weather && <Weather data={weather}/>}
+            {forecast && <Forecast data={forecast}/>}
         </div>
     )
 }
