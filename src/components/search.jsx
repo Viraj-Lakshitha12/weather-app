@@ -1,6 +1,6 @@
 import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
-import { options, GEO_API_URL } from "/api.js"; // Update the import path accordingly
+import { options, GEO_API_URL } from "/src/api/findCityApi.js";
 
 export const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null);
