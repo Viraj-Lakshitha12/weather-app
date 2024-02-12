@@ -1,6 +1,6 @@
 import { AsyncPaginate } from "react-select-async-paginate";
 import { useState } from "react";
-import { options, GEO_API_URL } from "/api"; // Update the import path accordingly
+import { options, GEO_API_URL } from "/api.js"; // Update the import path accordingly
 
 export const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null);
@@ -27,6 +27,7 @@ export const Search = ({ onSearchChange }) => {
                 };
             });
     };
+
     return (
         <div className="flex mt-10 justify-center">
             <div className="min-w-[70vw] border-4">
