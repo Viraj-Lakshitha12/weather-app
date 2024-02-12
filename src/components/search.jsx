@@ -30,7 +30,7 @@ export const Search = ({ onSearchChange }) => {
 
     return (
         <div className="flex mt-10 justify-center">
-            <div className="min-w-[70vw] border-4">
+            <div className="min-w-[70vw] border-2 border-black rounded-md">
                 <AsyncPaginate
                     placeholder={'Search for a city'}
                     value={search}
