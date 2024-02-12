@@ -1,5 +1,5 @@
 import './app.css'
-import { Search } from "./components/search.js";
+import { Search } from "./components/search.jsx";
 
 export function App() {
     const handleOnSearchData = (searchData) => {
