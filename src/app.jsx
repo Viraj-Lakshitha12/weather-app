@@ -19,7 +19,7 @@ export function App() {
         }
 
         try {
-            const response = await fetch(forecast_url, forecastOptions);
+            const response = await fetch(`${forecast_url}/${lat}/${lot}`, forecastOptions);
             const result = await response.json();
             setForecast(result)
             console.log(result);
